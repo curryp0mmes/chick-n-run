@@ -1,0 +1,230 @@
+﻿  Button.cpp
+  Game.cpp
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\TileMap.h(98): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\TileMap.h(116): warning C4244: "Argument": Konvertierung von "int" in "T", möglicher Datenverlust
+          with
+          [
+              T=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\TileMap.h(120): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\TileMap.h(164): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\TileMap.h(165): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\TileMap.h(183): warning C4244: "Argument": Konvertierung von "unsigned int" in "T", möglicher Datenverlust
+          with
+          [
+              T=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\TileMap.h(184): warning C4244: "Argument": Konvertierung von "unsigned int" in "T", möglicher Datenverlust
+          with
+          [
+              T=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\TileMap.h(185): warning C4244: "Argument": Konvertierung von "unsigned int" in "T", möglicher Datenverlust
+          with
+          [
+              T=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\TileMap.h(186): warning C4244: "Argument": Konvertierung von "unsigned int" in "T", möglicher Datenverlust
+          with
+          [
+              T=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\TileMap.h(189): warning C4244: "Argument": Konvertierung von "T" in "T", möglicher Datenverlust
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\TileMap.h(190): warning C4244: "Argument": Konvertierung von "T" in "T", möglicher Datenverlust
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\TileMap.h(191): warning C4244: "Argument": Konvertierung von "T" in "T", möglicher Datenverlust
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\TileMap.h(192): warning C4244: "Argument": Konvertierung von "T" in "T", möglicher Datenverlust
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\Game.cpp(81): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\Game.cpp(104): warning C4305: "=": Verkürzung von "double" in "float"
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\Game.cpp(114): warning C4305: "=": Verkürzung von "double" in "float"
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\Game.cpp(145): warning C4244: "-=": Konvertierung von "double" in "float", möglicher Datenverlust
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\Game.cpp(152): warning C4244: "-=": Konvertierung von "double" in "float", möglicher Datenverlust
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\Game.cpp(162): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\Game.cpp(162): warning C4244: "+=": Konvertierung von "_Ty" in "int", möglicher Datenverlust
+          with
+          [
+              _Ty=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\Game.cpp(247): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+  GameAudio.cpp
+  Gui.cpp
+  LevelSelectable.cpp
+  Tile.cpp
+  main.cpp
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\TileMap.h(98): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\TileMap.h(116): warning C4244: "Argument": Konvertierung von "int" in "T", möglicher Datenverlust
+          with
+          [
+              T=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\TileMap.h(120): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\TileMap.h(164): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\TileMap.h(165): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\TileMap.h(183): warning C4244: "Argument": Konvertierung von "unsigned int" in "T", möglicher Datenverlust
+          with
+          [
+              T=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\TileMap.h(184): warning C4244: "Argument": Konvertierung von "unsigned int" in "T", möglicher Datenverlust
+          with
+          [
+              T=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\TileMap.h(185): warning C4244: "Argument": Konvertierung von "unsigned int" in "T", möglicher Datenverlust
+          with
+          [
+              T=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\TileMap.h(186): warning C4244: "Argument": Konvertierung von "unsigned int" in "T", möglicher Datenverlust
+          with
+          [
+              T=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\TileMap.h(189): warning C4244: "Argument": Konvertierung von "T" in "T", möglicher Datenverlust
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\TileMap.h(190): warning C4244: "Argument": Konvertierung von "T" in "T", möglicher Datenverlust
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\TileMap.h(191): warning C4244: "Argument": Konvertierung von "T" in "T", möglicher Datenverlust
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\TileMap.h(192): warning C4244: "Argument": Konvertierung von "T" in "T", möglicher Datenverlust
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\main.cpp(94): warning C4244: "Argument": Konvertierung von "T" in "T", möglicher Datenverlust
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\main.cpp(104): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\main.cpp(110): warning C4244: "Argument": Konvertierung von "T" in "T", möglicher Datenverlust
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\main.cpp(111): warning C4244: "Argument": Konvertierung von "T" in "T", möglicher Datenverlust
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\main.cpp(112): warning C4244: "Argument": Konvertierung von "T" in "T", möglicher Datenverlust
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\main.cpp(113): warning C4244: "Argument": Konvertierung von "T" in "T", möglicher Datenverlust
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\main.cpp(144): warning C4244: "Argument": Konvertierung von "T" in "T", möglicher Datenverlust
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\main.cpp(187): warning C4244: "Argument": Konvertierung von "T" in "T", möglicher Datenverlust
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\main.cpp(200): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\main.cpp(206): warning C4244: "Argument": Konvertierung von "T" in "T", möglicher Datenverlust
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\SuT\main.cpp(209): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+  Code wird generiert.
+  5 of 908 functions ( 0.6%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    4 functions had inline decision re-evaluated but remain unchanged
+  Codegenerierung ist abgeschlossen.
+  SuT.vcxproj -> F:\Weiteres\Documents\Visual Studio 2017\Projects\SuT\Release\SuT.exe
