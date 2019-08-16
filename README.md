@@ -2,12 +2,7 @@
 
 Copyright (C) <2019> <JJV> All rights reserved
 
->  _____ _     _      _           _   _        _____             
-> / ____| |   (_)    | |         | \ | |      |  __ \            
->| |    | |__  _  ___| | ________|  \| |______| |__) |   _ _ __  
->| |    | '_ \| |/ __| |/ /______| . ` |______|  _  / | | | '_ \ 
->| |____| | | | | (__|   <       | |\  |      | | \ \ |_| | | | |
-> \_____|_| |_|_|\___|_|\_\      |_| \_|      |_|  \_\__,_|_| |_|
+# CHICK N RUN
 
 A life in a fully packed Barn? - The nightmare of every chicken!
 Chick-n, the main character of this game, takes its opportunity
