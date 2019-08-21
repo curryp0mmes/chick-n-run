@@ -12,6 +12,7 @@ public:
 	void setWindow(RenderWindow* win) { window = win; }
 	bool init();
 	void frame();
+	void animateChicken(int action);
 	int update(string pathToLevel);
 	bool doesCollide(Sprite playerToTest);
 	IntRect texture(int number, bool mirrored);
@@ -36,6 +37,10 @@ private:
 	Time thetime;
 	bool shifting;
 	vector<float> fps;
+	int animationFrame = 0;
+	int framesSinceLastAnimation = 0;
+	bool standing = true;
+	bool facingLeft = false;
 	int isDead;
 	int won;
 	Text youwon;

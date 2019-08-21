@@ -2,6 +2,7 @@
 #include "Game.h"
 #include "LevelSelectable.h"
 #include "defines.h"
+#include "LevelMenu.h"
 
 
 bool running = true;
@@ -10,6 +11,8 @@ int mode = 0;
 int lastmode = 0;
 int modelastframe = -1;
 RenderWindow window;
+LevelMenu menu(&window);
+
 bool reset = false;
 Font stdFont;
 vector<LevelSelectable> levelList;
@@ -37,6 +40,7 @@ void run() {
 	title.setCharacterSize(70);
 	title.setOrigin(Vector2f(title.getGlobalBounds().width / 2, title.getGlobalBounds().height /2));
 	title.setFillColor(Color::Black);
+	sf::FloatRect updateView;
 
 	Texture playTexture;
 	Texture settTexture;
@@ -51,13 +55,12 @@ void run() {
 	Button playbutton(&playTexture, Vector2f(300, 90), &window);
 	Button settbutton(&settTexture, Vector2f(300, 90), &window);
 	Button exitbutton(&exitTexture, Vector2f(300, 90), &window);
-	Button backbutton(&backTexture, Vector2f(300, 90), &window);
+	
 
 	playbutton.setOrigin(Vector2f(playbutton.button.getGlobalBounds().width / 2 / playbutton.button.getScale().x, playbutton.button.getOrigin().y));
 	settbutton.setOrigin(Vector2f(settbutton.button.getGlobalBounds().width / 2 / settbutton.button.getScale().x, settbutton.button.getOrigin().y));
 	exitbutton.setOrigin(Vector2f(exitbutton.button.getGlobalBounds().width / 2 / exitbutton.button.getScale().x, exitbutton.button.getOrigin().y));
-	backbutton.setOrigin(Vector2f(backbutton.button.getGlobalBounds().width / 2 / backbutton.button.getScale().x, backbutton.button.getOrigin().y));
-
+	
 	bool moving = false;
 	Vector2i movingStartingPos;
 
@@ -178,44 +181,23 @@ void run() {
 			wasSelectedLevel = selectedLevel;
 			break;
 		case 2:
-			selectedLevel = "";
 			//choosing levels
-			if (mode != modelastframe) {
-				moving = false;
-				window.setSize(Vector2u(1280,720));
-				window.setPosition(Vector2i(VideoMode::getDesktopMode().width / 2 - window.getSize().x / 2, VideoMode::getDesktopMode().height / 2 - window.getSize().y / 2));
-				sf::FloatRect updateView(0.f, 0.f, window.getSize().x, window.getSize().y);
-				window.setView(sf::View(updateView));
-				modelastframe = mode;
-				
-			}
-			if (moving) {
-				window.setPosition(Vector2i(Mouse::getPosition().x - movingStartingPos.x, Mouse::getPosition().y - movingStartingPos.y));
-			}
-			while (window.pollEvent(e)) {
-				if (e.type == e.Closed || (e.type == e.KeyPressed && e.key.code == Keyboard::Escape)) {
-					lastmode = mode;
-					mode = 0;
-				}
-				else if (e.type == e.MouseButtonPressed && e.mouseButton.button == Mouse::Left && Mouse::getPosition(window).y < window.getSize().y / 10) {
-					moving = true;
-					movingStartingPos = Vector2i(Mouse::getPosition(window));
-				}
-				else if (e.type == e.MouseButtonReleased && e.mouseButton.button == Mouse::Left) moving = false;
-			}
-			backbutton.setPosition(Vector2f(window.getSize().x / 2, window.getSize().y * 4 / 5));
+			selectedLevel = "";
+			(&menu)->~LevelMenu();
+			new (&menu) LevelMenu(&window);
 
-			window.clear(Color::White);
-			for (int i = 0; i < levelList.size(); i++) {
-				levelList[i].draw();
-				if (levelList[i].selected) {
-					selectedLevel = levelList[i].name;
-					lastmode = mode;
-					mode = 1;
-				}
-			}
-			if(backbutton.draw()) mode = lastmode;
-			window.display();
+			moving = false;
+			window.setSize(Vector2u(1280,720));
+			window.setPosition(Vector2i(VideoMode::getDesktopMode().width / 2 - window.getSize().x / 2, VideoMode::getDesktopMode().height / 2 - window.getSize().y / 2));
+			updateView = FloatRect(0.f, 0.f, window.getSize().x, window.getSize().y);
+			window.setView(sf::View(updateView));
+			modelastframe = mode;
+			
+			selectedLevel = menu.run();
+
+			if (selectedLevel == ".") mode = 0;
+			else mode = 1;
+
 			break;
 		default:
 			break;

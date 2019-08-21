@@ -75,6 +75,8 @@ int Game::update(string pathToLevel) {
 	death.setPosition(view.getCenter());
 	youwon.setPosition(view.getCenter());
 	wonSprite.setPosition(view.getCenter());
+	standing = true;
+
 
 	if (!isDead && !won) {
 		food -= 0.001f / fps[0];
@@ -126,9 +128,7 @@ int Game::update(string pathToLevel) {
 			isDead = 1;
 			
 		}
-		if (yVel > 0) {
-
-		}
+		
 		if (!Keyboard::isKeyPressed(Keyboard::Key::Return)) {
 			player.move(Vector2f(0, yVel / fps[0] * 16));
 			if (doesCollide(player)) {
@@ -141,14 +141,18 @@ int Game::update(string pathToLevel) {
 		if (yVel < 9.81f) yVel += 9.81f / fps[0];
 
 		if (Keyboard::isKeyPressed(Keyboard::A)) {
-			player.setTextureRect(texture(0, 1));
+			facingLeft = true;
+			if (shifting) animateChicken(2);
+			else animateChicken(1);
 			player.move(Vector2f(-xSpeedPS, 0));
 			if (doesCollide(player)) player.move(Vector2f(xSpeedPS, 0));
 			else food -= shifting ? 0.04 / fps[0] : 0.01 / fps[0];
 			//else if(player.getPosition().x < view.getCenter().x - 60) view.move(Vector2f(-xSpeedPS, 0));
 		}
 		if (Keyboard::isKeyPressed(Keyboard::D)) {
-			player.setTextureRect(texture(0, 0));
+			facingLeft = false;
+			if (shifting) animateChicken(2);
+			else animateChicken(1);
 			player.move(Vector2f(xSpeedPS, 0));
 			if (doesCollide(player)) player.move(Vector2f(-xSpeedPS, 0));
 			else food -= shifting ? 0.04 / fps[0] : 0.01 / fps[0];
@@ -156,7 +160,9 @@ int Game::update(string pathToLevel) {
 		}
 		if (Keyboard::isKeyPressed(Keyboard::Period)) window->setFramerateLimit(20);
 		else window->setFramerateLimit(120);
-
+		if (yVel > 1) {
+			animateChicken(3);
+		}
 		if (Keyboard::isKeyPressed(Keyboard::F3) && !f3p) f3 = !f3;
 		f3p = Keyboard::isKeyPressed(Keyboard::F3);
 		f3ss.str(std::string());
@@ -176,6 +182,8 @@ int Game::update(string pathToLevel) {
 
 		gui.update(food);
 
+
+		if (standing) animateChicken(0);
 
 		//view.setCenter(Vector2f(view.getCenter().x,player.getPosition().y));
 		window->setView(view);
@@ -265,4 +273,41 @@ void Game::frame() {
 		window->draw(youwon);
 	}
 
+}
+
+void Game::animateChicken(int action)
+{
+	switch (action) {
+	case 1:
+		framesSinceLastAnimation++;
+		if (framesSinceLastAnimation > fps[0] / 10.f) {
+			animationFrame++;
+			if (animationFrame > 4) animationFrame = 0;
+			framesSinceLastAnimation = 0;
+		}
+		player.setTextureRect(texture(1+animationFrame, facingLeft));
+		standing = false;
+		break;
+	case 2:
+		framesSinceLastAnimation++;
+		if (framesSinceLastAnimation > fps[0] / 15.f) {
+			animationFrame++;
+			if (animationFrame > 4) animationFrame = 0;
+			framesSinceLastAnimation = 0;
+		}
+		player.setTextureRect(texture(1 + animationFrame, facingLeft));
+		standing = false;
+		break;
+	case 3:
+		framesSinceLastAnimation = 0;
+		animationFrame = 0;
+		player.setTextureRect(texture(6, facingLeft));
+		standing = false;
+		break;
+	default:
+		framesSinceLastAnimation = 0;
+		animationFrame = 0;
+		player.setTextureRect(texture(0, facingLeft));
+		break;
+	}
 }
